@@ -60,21 +60,26 @@ def get_math_agent(groq_api_key: str):
     return agent
 
 
-def get_wikipedia_agent():
+def get_wikipedia_agent(groq_api_key: str):
     wikipedia = WikipediaAPIWrapper()
+
     tool = Tool(
         name="Wikipedia",
         func=wikipedia.run,
         description="Search for general knowledge or definitions using Wikipedia."
     )
+
+    llm = get_llm(groq_api_key)  # ✅ Use the real LLM here
+
     agent = initialize_agent(
         tools=[tool],
-        llm=None,
+        llm=llm,
         agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
         verbose=False,
         handle_parsing_errors=True
     )
     return agent
+
 
 
 def get_reasoning_agent(groq_api_key: str):

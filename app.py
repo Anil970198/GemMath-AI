@@ -51,7 +51,7 @@ with tabs[1]:
     wiki_query = st.text_input("What do you want to know about?", "Black holes")
     if st.button("🔍 Search", key="wiki"):
         with st.spinner("Searching Wikipedia..."):
-            agent = get_wikipedia_agent()
+            agent = get_wikipedia_agent(groq_api_key)
             result = agent.run(wiki_query)
             st.success(result)
 

@@ -23,8 +23,10 @@ cd gemmath-ai
 pip install -r requirements.txt
 streamlit run app.py
 ```
+## Groq API Key 🔑
 
 > Make sure to paste your `Groq API Key` in the sidebar after launching.
+> Visit https://console.groq.com/playground to get your API today!!
 
 ---
 
