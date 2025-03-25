@@ -10,7 +10,6 @@ A web-based AI assistant that solves math problems, answers logical reasoning qu
 - 🔢 **Solve Math Problems** with step-by-step explanations
 - 📚 **Wikipedia Search** for general knowledge queries
 - 🤖 **Logic Reasoning Tool** powered by LLM chain prompts
-- 🌗 **Light/Dark Theme Toggle**
 - 🧠 Uses **Google Gemma 2 model** through **Groq API**
 - 🌐 Deployed using **Streamlit Cloud**
 
